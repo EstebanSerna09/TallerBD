@@ -39,3 +39,4 @@ CREATE TABLE usuario (
   id_prestamo int(11) DEFAULT NULL,
   FOREIGN KEY (id_prestamo) REFERENCES prestamo (id_prestamo) ON DELETE CASCADE 
 );
+
