@@ -40,3 +40,37 @@ CREATE TABLE usuario (
   FOREIGN KEY (id_prestamo) REFERENCES prestamo (id_prestamo) ON DELETE CASCADE 
 );
 
+INSERT INTO autor (id_autor,nombre) VALUES
+(0,"Gabriel García Márquez"),
+(1,"J. R. R. Tolkien"),
+(2,"George Orwell"),
+(3,"Aldous Huxley"),
+(4,"Jane Austen");
+
+INSERT INTO libro (id_libro,titulo,editorial,id_autor) VALUES
+(0,"Cien años de soledad","edit1",0),
+(1,"El señor de los anillos","edit2",1),
+(2,"1984","edit3",2),
+(3,"Un mundo feliz","edit4",3),
+(4,"Orgullo y prejuicio","edit5",4);
+
+INSERT INTO multa (id_multa,penalizacion) VALUES
+(0,10),
+(1,15),
+(2,20),
+(3,13),
+(4,18);
+
+INSERT INTO prestamo (id_prestamo,diashabiles,id_multa) VALUES
+(0,14,0),
+(1,7,1),
+(2,7,2),
+(3,21,3),
+(4,28,4);
+
+INSERT INTO usuario (id_usuario,nombre_usuario,edad,numero_cont,id_prestamo) VALUES
+(0,"Esteban",18,3017325752,0),
+(1,"Juan",19,3017325752,1),
+(2,"Kaleft",19,3017325752,2),
+(3,"Angie",21,3017325752,3),
+(4,"Cristian",20,3017325752,4);
